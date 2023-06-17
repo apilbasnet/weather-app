@@ -25,11 +25,11 @@ const Weather = () => {
                         setCurrentLocation({ latitude, longitude });
                     },
                     (error) => {
-                        console.error('Error getting geolocation:', error);
+                        // console.error('Error getting geolocation:', error);
                     }
                 );
             } else {
-                console.error('Geolocation is not supported by this browser.');
+                // console.error('Geolocation is not supported by this browser.');
             }
         };
         getCurrentPosition();
@@ -57,8 +57,8 @@ const Weather = () => {
 
         try {
             const { latitude, longitude } = currentLocation;
-            console.log(latitude);
-            console.log(longitude);
+            // console.log(latitude);
+            // console.log(longitude);
 
 
             const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,uv_index_clear_sky_max,rain_sum,windspeed_10m_max&forecast_days=1&timezone=auto`);
@@ -71,7 +71,7 @@ const Weather = () => {
         } catch (err) {
             setError(err.message);
         }
-        console.log(weatherData);
+        // console.log(weatherData);
     };
 
     const fetchData = async (lat, lng) => {
@@ -94,7 +94,7 @@ const Weather = () => {
         } catch (err) {
             setError(err.message);
         }
-        console.log(weatherData1);
+        // console.log(weatherData1);
     };
 
 
@@ -115,7 +115,7 @@ const Weather = () => {
 
 
         } catch (error) {
-            console.log("Error fetching coordinates.")
+            // console.log("Error fetching coordinates.")
         }
 
     }
