@@ -122,9 +122,9 @@ const Weather = () => {
 
 
     return (
-        <div className='  grid   grid-cols-2  h-screen place-items-center'>
+        <div className=' grid  lg:grid-cols-2  h-screen place-items-center  '>
 
-            <div className=" col-span-2 mt-5 text-center">
+            <div className=" col-span-2 md:mt-5 text-center text-white md:text-black">
                 <h1 className=" font-bold  text-3xl">Weather App</h1>
                 <h1>
                     Current Time : {currentTime}
@@ -144,7 +144,7 @@ const Weather = () => {
 
 
 
-            <div className=" mb-5 border border-gray-400 rounded-md w-[350px] h-[400px] flex flex-col items-center justify-center text-white"  >
+            <div className=" col-span-2 lg:col-span-1  md:mb-5 border border-gray-400 rounded-md p-2 w-[80vw] h-[35vh]  lg:w-[350px] lg:h-[400px] flex flex-col items-center justify-center text-white"  >
                 <h1 className=" font-bold mb-5 text-3xl">Local</h1>
 
 
@@ -173,7 +173,7 @@ const Weather = () => {
 
             </div>
 
-            <div className="border  border-gray-400 rounded-md w-[350px] h-[400px] flex flex-col items-center justify-center text-white"  >
+            <div className="col-span-2 lg:col-span-1 md:mb-5 border  border-gray-400 rounded-md w-[80vw] h-[45vh] lg:w-[350px] lg:h-[400px] flex flex-col items-center justify-center text-white"  >
                 <h1 className=" font-bold mb-5 text-3xl">International</h1>
 
                 <form onSubmit={handleSubmit1}>
