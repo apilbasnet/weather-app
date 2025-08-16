@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 const Weather = () => {
-    const API_KEY = "0e708c878ddb415f89a45ce2d53a7435"
+   
 
     const [location, setLocation] = useState('');
 
@@ -103,7 +103,7 @@ const Weather = () => {
 
         try {
             const response1 = await axios.get(
-                `https://api.opencagedata.com/geocode/v1/json?q=${location}&key=${API_KEY}`
+                `https://api.opencagedata.com/geocode/v1/json?q=${location}&key=${import.meta.env.API_KEY}`
 
             );
 
